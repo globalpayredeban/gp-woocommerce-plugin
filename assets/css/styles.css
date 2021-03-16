@@ -7,9 +7,29 @@
   height:53px;
   padding: 8px;
   text-align: center;
-  background: #0fbd71;
+  background: #FF9D1C;
   color: #FFF;
   font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.ltp-button {
+  border: 1px solid #9c9c9c;
+  width: 30%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  line-height:1;
+  height:53px;
+  padding: 8px;
+  text-align: center;
+  background: #FF9D1C;
+  color: #FFF;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -51,7 +71,7 @@
   display: none!important;
 }
 
-.btn-tienda {
+.purchase-button {
   background-color: #0fbd71;
   text-decoration: none;
   color: #fff;
