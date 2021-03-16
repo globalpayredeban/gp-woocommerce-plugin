@@ -60,13 +60,8 @@ When we have the project compressed in .zip format, we proceed to the installati
 ### 3.2.- Languages
 The language of the plugin is dynamically selected according to the language that is configured in Wordpress. The languages that are available are:
 - Spanish
-- Spanish MX
 - Spanish CO
-- Spanish PE
-- Spanish EC
-- Spanish LA
-- Portuguese
-- Portuguese BR
+- English (Default)
 
 ## 4. Activation and Configuration of the Plugin in WooCommerce
 After having installed our plugin in Wordpress we must proceed to configure it in the WooCommerce admin.
