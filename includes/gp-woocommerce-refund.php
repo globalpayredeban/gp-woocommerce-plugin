@@ -16,7 +16,7 @@ class WC_Payment_Refund_GP
     $environment = $refundObj->environment;
     $urlrefund = ($environment == 'yes') ? 'https://ccapi-stg.'.SG_DOMAIN.SG_REFUND : 'https://ccapi.'.SG_DOMAIN.SG_REFUND ;
 
-    $transactionCode = PG_WC_Helper::select_order($order_id);
+    $transactionCode = GP_WC_Helper::select_order($order_id);
     $data = array(
       'transaction' => array(
         'id' => $transactionCode,

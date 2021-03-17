@@ -24,7 +24,7 @@ define("GP_LTP", "/linktopay/init_order/");
 
 add_action( 'plugins_loaded', 'gp_woocommerce_plugin' );
 
-register_activation_hook( __FILE__, array( 'PG_WC_Helper', 'create_table' ) );
+register_activation_hook( __FILE__, array( 'GP_WC_Helper', 'create_table' ) );
 
 require( dirname( __FILE__ ) . '/includes/gp-woocommerce-refund.php' );
 
@@ -101,7 +101,7 @@ if (!function_exists('gp_woocommerce_plugin')) {
 			}
 
       public function generate_ltp_form($order) {
-        $url = PG_WC_Helper::generate_ltp($order, $this->environment);
+        $url = GP_WC_Helper::generate_ltp($order, $this->environment);
 				$order->update_status( 'on-hold', __( 'Payment status will be updated via webhook.', 'gp_woocommerce' ) );
         ?>
           <link rel="stylesheet" type="text/css" href="<?php echo $this->css; ?>">
@@ -119,7 +119,7 @@ if (!function_exists('gp_woocommerce_plugin')) {
       public function generate_cc_form($order) {
         $webhook_p = plugins_url('/includes/gp-woocommerce-webhook.php', __FILE__);
         $checkout = plugins_url('/assets/js/payment_checkout.js', __FILE__);
-        $order_data = PG_WC_Helper::get_checkout_params($order);
+        $order_data = GP_WC_Helper::get_checkout_params($order);
         ?>
           <link rel="stylesheet" type="text/css" href="<?php echo $this->css; ?>">
 
