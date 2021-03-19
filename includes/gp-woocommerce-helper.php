@@ -130,7 +130,7 @@ class GP_WC_Helper
       ],
       'configuration' => [
         'partial_payment' => false,
-        'expiration_time' => 3600,
+        'expiration_days' => 1,
         'success_url' => $redirect_url,
         'failure_url' => $redirect_url,
         'pending_url' => $redirect_url,
