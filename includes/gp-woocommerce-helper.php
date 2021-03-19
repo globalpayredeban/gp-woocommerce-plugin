@@ -108,7 +108,7 @@ class GP_WC_Helper
    */
   public static function generate_ltp($order, $environment) {
     $url_ltp = ($environment == 'yes') ? 'https://noccapi-stg.'.GP_DOMAIN.GP_LTP : 'https://noccapi.'.GP_DOMAIN.GP_LTP ;
-    $auth_token = GP_WC_Helper::generate_auth_token('client');
+    $auth_token = GP_WC_Helper::generate_auth_token('server');
 
     $checkout_data = GP_WC_Helper::get_checkout_params($order);
     $redirect_url = $order->get_view_order_url();
