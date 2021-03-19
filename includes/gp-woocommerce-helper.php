@@ -17,7 +17,7 @@ class GP_WC_Helper
   public static function create_table() {
     global $wpdb;
 
-    $sql = 'CREATE TABLE '.SG_TABLE_NAME.' (
+    $sql = 'CREATE TABLE '.GP_TABLE_NAME.' (
            id integer(9) unsigned NOT NULL AUTO_INCREMENT,
            status varchar(50) NOT NULL,
            comments varchar(50) NOT NULL,
@@ -37,7 +37,7 @@ class GP_WC_Helper
   public static function insert_data($status, $comments, $description, $dev_reference, $transaction_id) {
     global $wpdb;
     $wpdb->insert(
-      SG_TABLE_NAME,
+      GP_TABLE_NAME,
       array(
         'status'            => $status,
         'comments'          => $comments,
@@ -60,7 +60,7 @@ class GP_WC_Helper
    */
   public static function select_order($order_id) {
     global $wpdb;
-    $myrows = $wpdb->get_results("SELECT * FROM ".SG_TABLE_NAME." where order_id = '$order_id' ", OBJECT);
+    $myrows = $wpdb->get_results("SELECT * FROM ".GP_TABLE_NAME." where order_id = '$order_id' ", OBJECT);
 
     foreach ($myrows as $campos) {
       $transactionCode = $campos->pg_transaction_id;
@@ -107,7 +107,7 @@ class GP_WC_Helper
    *
    */
   public static function generate_ltp($order, $environment) {
-    $url_ltp = ($environment == 'yes') ? 'https://noccapi-stg.'.SG_DOMAIN.SG_LTP : 'https://noccapi.'.SG_DOMAIN.SG_LTP ;
+    $url_ltp = ($environment == 'yes') ? 'https://noccapi-stg.'.GP_DOMAIN.GP_LTP : 'https://noccapi.'.GP_DOMAIN.GP_LTP ;
     $auth_token = GP_WC_Helper::generate_auth_token('client');
 
     $checkout_data = GP_WC_Helper::get_checkout_params($order);
