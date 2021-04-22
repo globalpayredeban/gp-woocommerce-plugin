@@ -119,4 +119,4 @@ We type the amount to be reimbursed and click the **Refund via Globalpay** butto
 ## 7. Webhook Configuration
 The plugin includes the functionality of a webhook to receive the transaction updates that are made. This webhook receives transaction notifications and updates them in the WooCommerce admin and database.
 
-To configure it, the merchant must provide its **Globalpay** commercial advisor with the address where the webhook is installed, it will be in the following format: https://{{URL-COMMERCE}}/wp-content/plugins/gp-woocommerce-plugin/includes/gp-woocommerce-webhook.php.
+To configure it, the merchant must provide its **Globalpay** commercial advisor with the address where the webhook is installed, it will be in the following format: https://{{URL-COMMERCE}}/wp-json/globalpay/webhook/v1/params.
