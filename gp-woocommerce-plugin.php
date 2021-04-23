@@ -4,7 +4,7 @@
 Plugin Name: GlobalPay WooCommerce Plugin
 Plugin URI: https://developers.globalpay.com.co/docs/payments/
 Description: This module is a solution that allows WooCommerce users to easily process credit card payments.
-Version: 2.0
+Version: 2.0.1
 Author: GlobalPay
 Author URI: https://developers.globalpay.com.co/docs/payments/
 Text Domain: gp_woocommerce
