@@ -184,7 +184,7 @@ if (!function_exists('gp_woocommerce_plugin')) {
                 GP_WC_Helper::get_installments_type($this->enable_installments);
                 ?>
                 <div id="payment-buttons">
-                    <script src="https://cdn.paymentez.com/ccapi/sdk/payment_checkout_stable.min.js"></script>
+                    <script src="https://cdn.globalpay.com.co/ccapi/sdk/payment_checkout_stable.min.js"></script>
                 </div>
 
                 <button id="checkout-button" class="js-payment-checkout"><?php echo $this->card_button_text; ?></button>
