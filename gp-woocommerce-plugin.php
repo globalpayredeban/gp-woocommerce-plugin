@@ -95,7 +95,7 @@ if (!function_exists('gp_woocommerce_plugin')) {
             }
 
             function admin_options() {
-                $logo = plugins_url('/assets/imgs/payment.png', __FILE__);
+                $logo = plugins_url('/assets/imgs/payment.jpg', __FILE__);
                 ?>
                 <p>
                     <img style='width: 30%;position: relative;display: inherit;'src='<?php echo $logo;?>'>
