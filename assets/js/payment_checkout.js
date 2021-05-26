@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    var checkout_values = document.getElementById('woocommerce_checkout_pg');
+    var checkout_values = document.getElementById('woocommerce_checkout_gp');
     var language = checkout_values.getAttribute('checkout_language');
     var app_code_js = checkout_values.getAttribute('app_code');
     var app_key_js = checkout_values.getAttribute('app_key');
