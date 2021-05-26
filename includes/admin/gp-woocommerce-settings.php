@@ -7,6 +7,12 @@ return array (
         'label' => __( 'Use staging environment in ', 'gp_woocommerce' ).GP_FLAVOR.'.',
         'default' => 'yes'
     ),
+    'enable_card' => array(
+        'title' => __( 'Enable Card Payment', 'gp_woocommerce' ),
+        'type' => 'checkbox',
+        'label' => __( 'If selected, card payment can be used to pay.', 'gp_woocommerce' ),
+        'default' => 'no'
+    ),
     'enable_ltp' => array(
         'title' => __( 'Enable LinkToPay', 'gp_woocommerce' ),
         'type' => 'checkbox',
@@ -27,45 +33,55 @@ return array (
         'default' => GP_FLAVOR.__(' is a complete solution for online payments. Safe, easy and fast.', 'gp_woocommerce
         ')
     ),
-    'checkout_language' => array(
-      'title' => __('Checkout Language', 'gp_woocommerce'),
-      'type' => 'select',
-      'default' => 'en',
-      'options' => array(
-        'en' => 'EN',
-        'es' => 'ES',
-        'pt' => 'PT',
-      ),
-      'description' => __('User\'s preferred language for checkout window. English will be used by default.', 'gp_woocommerce')
+    'card_button_text' => array(
+        'title' => __( 'Card Button Text', 'gp_woocommerce' ),
+        'type' => 'text',
+        'description' => __( 'This controls the text that the user sees in the card payment button.', 'gp_woocommerce' ),
+        'default' => __('Pay With Card', 'gp_woocommerce'),
+        'desc_tip' => true,
     ),
-    'installments_type' => array(
-      'title' => __('Installments Type', 'gp_woocommerce'),
-      'type' => 'select',
-      'default' => -1,
-      'options' => array(
-        -1 => __('Disabled', 'gp_woocommerce'),
-        0  => __('Enabled', 'gp_woocommerce'),
-      ),
-      'description' => __('Select the installments type that will be enabled on the payment screen (Only on card payment).', 'gp_woocommerce')
+    'ltp_button_text' => array(
+        'title' => __( 'LinkToPay Button Text', 'gp_woocommerce' ),
+        'type' => 'text',
+        'description' => __( 'This controls the text that the user sees in the LinkToPay button.', 'gp_woocommerce' ),
+        'default' =>  __( 'Pay with Cash/Bank Transfer', 'gp_woocommerce' ),
+        'desc_tip' => true,
+    ),
+    'checkout_language' => array(
+        'title' => __('Checkout Language', 'gp_woocommerce'),
+        'type' => 'select',
+        'default' => 'en',
+        'options' => array(
+            'en' => 'EN',
+            'es' => 'ES',
+            'pt' => 'PT',
+        ),
+        'description' => __('User\'s preferred language for checkout window. English will be used by default.', 'gp_woocommerce')
+    ),
+    'enable_installments' => array(
+        'title' => __('Enable Installments', 'gp_woocommerce'),
+        'type' => 'checkbox',
+        'default' => 'no',
+        'label' => __('If selected, the installments options will be showed on the payment screen (Only on card payment).', 'gp_woocommerce')
     ),
     'app_code_client' => array(
-      'title' => __('App Code Client', 'gp_woocommerce'),
-      'type' => 'text',
-      'description' => __('Unique commerce identifier in ', 'gp_woocommerce').GP_FLAVOR.'.'
+        'title' => __('App Code Client', 'gp_woocommerce'),
+        'type' => 'text',
+        'description' => __('Unique commerce identifier in ', 'gp_woocommerce').GP_FLAVOR.'.'
     ),
     'app_key_client' => array(
-      'title' => __('App Key Client', 'gp_woocommerce'),
-      'type' => 'text',
-      'description' => __('Key used to encrypt communication with ', 'gp_woocommerce').GP_FLAVOR.'.'
+        'title' => __('App Key Client', 'gp_woocommerce'),
+        'type' => 'text',
+        'description' => __('Key used to encrypt communication with ', 'gp_woocommerce').GP_FLAVOR.'.'
     ),
     'app_code_server' => array(
-      'title' => __('App Code Server', 'gp_woocommerce'),
-      'type' => 'text',
-      'description' => __('Unique commerce identifier to perform admin actions on ', 'gp_woocommerce').GP_FLAVOR.'.'
+        'title' => __('App Code Server', 'gp_woocommerce'),
+        'type' => 'text',
+        'description' => __('Unique commerce identifier to perform admin actions on ', 'gp_woocommerce').GP_FLAVOR.'.'
     ),
     'app_key_server' => array(
-      'title' => __('App Key Server', 'gp_woocommerce'),
-      'type' => 'text',
-      'description' => __('Key used to encrypt admin communication with ', 'gp_woocommerce').GP_FLAVOR.'.'
+        'title' => __('App Key Server', 'gp_woocommerce'),
+        'type' => 'text',
+        'description' => __('Key used to encrypt admin communication with ', 'gp_woocommerce').GP_FLAVOR.'.'
     )
-  );
+);

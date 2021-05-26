@@ -116,7 +116,6 @@ class GP_WC_Helper
     public static function generate_ltp($order, $environment) {
         $url_ltp = ($environment == 'yes') ? 'https://noccapi-stg.'.GP_DOMAIN.GP_LTP : 'https://noccapi.'.GP_DOMAIN.GP_LTP ;
         $auth_token = GP_WC_Helper::generate_auth_token('server');
-
         $checkout_data = GP_WC_Helper::get_checkout_params($order);
         $redirect_url = $order->get_view_order_url();
 
@@ -155,13 +154,32 @@ class GP_WC_Helper
 
         try {
             $response = curl_exec($ch);
-            $get_response = json_decode($response, true);
-            $payment_url = $get_response['data']['payment']['payment_url'];
         } catch (Exception $e) {
-            $payment_url = NULL;
+            curl_close($ch);
+            return NULL;
         }
-        curl_close($ch);
-        return $payment_url;
+        $get_response = json_decode($response, true);
+
+        $data = $get_response['data'] ?: [];
+        if (array_key_exists('payment', $data)) {
+            curl_close($ch);
+            return $data['payment']['payment_url'];
+        } else {
+            if (curl_errno($ch)) {
+                $response = curl_error($ch);
+            } else {
+                $response = json_encode($get_response);
+            }
+            curl_close($ch);
+            ?>
+            <div id="ltp-failed">
+                <p class="alert alert-warning">
+                    <?php _e('An error occurred generating the payment link, gateway response', 'gp_woocommerce')?>: <?php echo $response;?>
+                </p>
+            </div>
+            <?php
+            return NULL;
+        }
     }
 
     /**
@@ -201,5 +219,37 @@ class GP_WC_Helper
         $stoken_server = md5($transaction_id . "_" . $webhookObj->app_code_server . "_" . $user_id . "_" . $webhookObj->app_key_server);
         return array($stoken_server, $stoken_client);
 
+    }
+
+    /**
+     * Method to show the installments on the payment page.
+     * @param string $enable_installments
+     * @return void
+     */
+    public static function get_installments_type($enable_installments)
+    {
+        $installments_options = [
+            0  => __('Enable Installments', 'gp_woocommerce'),
+        ];
+        ?>
+        <div class="select" id="installments_div">
+            <select name="installments_type" id="installments_type">
+                <option selected disabled><?php _e('Installments Type', 'gp_woocommerce'); ?>:</option>
+                <option value=-1><?php _e('Without Installments', 'gp_woocommerce'); ?></option>
+                <?php
+                if ($enable_installments == 'yes')
+                {
+                    foreach($installments_options as $value => $text)
+                    {
+                        ?>
+                        <option value=<?php echo $value;?>><?php echo $text; ?></option>
+                        <?php
+                    }
+                }
+                ?>
+            </select>
+            <br><br>
+        </div>
+        <?php
     }
 }
