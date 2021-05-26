@@ -27,7 +27,7 @@ const GP_LTP = "/linktopay/init_order/";
 
 add_action( 'plugins_loaded', 'gp_woocommerce_plugin' );
 
-function paymentez_payment_webhook( WP_REST_Request $request ) {
+function globalpay_payment_webhook( WP_REST_Request $request ) {
     $parameters = $request->get_params();
     try {
         $order = new WC_Order($parameters['transaction']['dev_reference']);
@@ -39,9 +39,9 @@ function paymentez_payment_webhook( WP_REST_Request $request ) {
 }
 
 add_action( 'rest_api_init', function () {
-    register_rest_route( 'paymentez/webhook/v1', 'params', array(
+    register_rest_route( 'globalpay/webhook/v1', 'params', array(
         'methods' => WP_REST_SERVER::CREATABLE,
-        'callback' => 'paymentez_payment_webhook',
+        'callback' => 'globalpay_payment_webhook',
         'args' => array(),
         'permission_callback' => function () {
             return true;
