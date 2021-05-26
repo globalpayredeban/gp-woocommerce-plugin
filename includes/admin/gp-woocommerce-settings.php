@@ -19,6 +19,13 @@ return array (
         'label' => __( 'If selected, LinkToPay(Bank transfer, cash) can be used to pay.', 'gp_woocommerce' ),
         'default' => 'no'
     ),
+    'ltp_expiration' => array(
+        'title' => __( 'Expiration Days for LinkToPay', 'gp_woocommerce' ),
+        'type' => 'number',
+        'description' => __( 'This value controls the number of days that the generated LinkToPay will be available to pay.', 'gp_woocommerce' ),
+        'default' => 1,
+        'desc_tip' => true,
+    ),
     'title' => array(
         'title' => __( 'Title', 'gp_woocommerce' ),
         'type' => 'text',

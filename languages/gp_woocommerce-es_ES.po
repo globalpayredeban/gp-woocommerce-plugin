@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-05-26 15:32-0500\n"
-"PO-Revision-Date: 2021-05-26 15:37-0500\n"
+"POT-Creation-Date: 2021-05-26 18:05-0500\n"
+"PO-Revision-Date: 2021-05-26 18:05-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -23,35 +23,35 @@ msgstr ""
 "Este módulo es una solución que permite a los usuarios de WooCommerce "
 "procesar fácilmente los pagos con tarjeta de crédito. Desarrollado por: "
 
-#: gp-woocommerce-plugin.php:117
+#: gp-woocommerce-plugin.php:118
 msgid "There are no payment methods selected by the merchant"
 msgstr "No hay métodos de pago configurados por el comercio"
 
-#: gp-woocommerce-plugin.php:123
+#: gp-woocommerce-plugin.php:124
 msgid "Return to checkout"
 msgstr "Regresar a la caja"
 
-#: gp-woocommerce-plugin.php:135
+#: gp-woocommerce-plugin.php:136
 msgid " payment pending."
 msgstr " pago pendiente."
 
-#: gp-woocommerce-plugin.php:145
+#: gp-woocommerce-plugin.php:146
 msgid "Transaction: "
 msgstr "Transacción: "
 
-#: gp-woocommerce-plugin.php:145
+#: gp-woocommerce-plugin.php:146
 msgid " refund status: "
 msgstr " estatus del reembolso: "
 
-#: gp-woocommerce-plugin.php:145
+#: gp-woocommerce-plugin.php:146
 msgid " reason: "
 msgstr " la razón es: "
 
-#: gp-woocommerce-plugin.php:174
+#: gp-woocommerce-plugin.php:175
 msgid "Your payment has been made successfully. Thank you for your purchase."
 msgstr "Su pago ha sido realizado con éxito. Gracias por su compra."
 
-#: gp-woocommerce-plugin.php:175
+#: gp-woocommerce-plugin.php:176
 msgid ""
 "An error occurred while processing your payment and could not be made. Try "
 "another Credit Card."
@@ -59,7 +59,7 @@ msgstr ""
 "Se produjo un error al procesar su pago y no se pudo realizar. Pruebe con "
 "otra tarjeta de crédito."
 
-#: gp-woocommerce-plugin.php:179
+#: gp-woocommerce-plugin.php:180
 msgid "Return to Store"
 msgstr "Regresar a la tienda"
 
@@ -90,57 +90,67 @@ msgstr ""
 "utilizar para pagar."
 
 #: includes/admin/gp-woocommerce-settings.php:23
+msgid "Expiration Days for LinkToPay"
+msgstr "Dias de Expiración para el LinkToPay"
+
+#: includes/admin/gp-woocommerce-settings.php:25
+msgid ""
+"This value controls the number of days that the generated LinkToPay will be "
+"available to pay."
+msgstr ""
+"Este valor controla el número de días que el LinkToPay generado estará "
+"disponible para pagar."
+
+#: includes/admin/gp-woocommerce-settings.php:30
 msgid "Title"
 msgstr "Título"
 
-#: includes/admin/gp-woocommerce-settings.php:25
+#: includes/admin/gp-woocommerce-settings.php:32
 msgid "This controls the title which the user sees during checkout page."
 msgstr "Esto controla el título que el usuario ve durante la página de pago."
 
-#: includes/admin/gp-woocommerce-settings.php:30
+#: includes/admin/gp-woocommerce-settings.php:37
 msgid "Customer Message"
 msgstr "Mensaje al Cliente"
 
-#: includes/admin/gp-woocommerce-settings.php:32
+#: includes/admin/gp-woocommerce-settings.php:39
 msgid "This controls the message which the user sees during checkout page."
-msgstr ""
-"Esto controla el mensaje que ve el usuario durante la página de pago."
+msgstr "Esto controla el mensaje que ve el usuario durante la página de pago."
 
-#: includes/admin/gp-woocommerce-settings.php:33
+#: includes/admin/gp-woocommerce-settings.php:40
 msgid " is a complete solution for online payments. Safe, easy and fast."
-msgstr ""
-" es una solución completa para pagos en línea. Segura, fácil y rápida."
+msgstr " es una solución completa para pagos en línea. Segura, fácil y rápida."
 
-#: includes/admin/gp-woocommerce-settings.php:37
+#: includes/admin/gp-woocommerce-settings.php:44
 msgid "Card Button Text"
 msgstr "Texto del Botón de Tarjeta"
 
-#: includes/admin/gp-woocommerce-settings.php:39
+#: includes/admin/gp-woocommerce-settings.php:46
 msgid "This controls the text that the user sees in the card payment button."
 msgstr ""
 "Esto controla el texto que ve el usuario en el botón de pago con tarjeta."
 
-#: includes/admin/gp-woocommerce-settings.php:40
+#: includes/admin/gp-woocommerce-settings.php:47
 msgid "Pay With Card"
 msgstr "Pagar con Tarjeta"
 
-#: includes/admin/gp-woocommerce-settings.php:44
+#: includes/admin/gp-woocommerce-settings.php:51
 msgid "LinkToPay Button Text"
 msgstr "Texto del Botón de LinkToPay"
 
-#: includes/admin/gp-woocommerce-settings.php:46
+#: includes/admin/gp-woocommerce-settings.php:53
 msgid "This controls the text that the user sees in the LinkToPay button."
 msgstr "Esto controla el texto que el usuario ve en el botón de LinkToPay."
 
-#: includes/admin/gp-woocommerce-settings.php:47
+#: includes/admin/gp-woocommerce-settings.php:54
 msgid "Pay with Cash/Bank Transfer"
 msgstr "Pagar con Efectivo/Transferencia Bancaria"
 
-#: includes/admin/gp-woocommerce-settings.php:51
+#: includes/admin/gp-woocommerce-settings.php:58
 msgid "Checkout Language"
 msgstr "Idioma del Checkout"
 
-#: includes/admin/gp-woocommerce-settings.php:59
+#: includes/admin/gp-woocommerce-settings.php:66
 msgid ""
 "User's preferred language for checkout window. English will be used by "
 "default."
@@ -148,63 +158,63 @@ msgstr ""
 "Idioma preferido del usuario para la ventana de pago. Inglés se usará de "
 "forma predeterminada."
 
-#: includes/admin/gp-woocommerce-settings.php:62
-#: includes/gp-woocommerce-helper.php:232
+#: includes/admin/gp-woocommerce-settings.php:69
+#: includes/gp-woocommerce-helper.php:233
 msgid "Enable Installments"
 msgstr "Habilitar Cuotas"
 
-#: includes/admin/gp-woocommerce-settings.php:65
+#: includes/admin/gp-woocommerce-settings.php:72
 msgid ""
 "If selected, the installments options will be showed on the payment screen "
 "(Only on card payment)."
 msgstr ""
-"Si se selecciona, las opciones de cuotas se mostrarán en la pantalla de "
-"pago (Solo en pago con tarjeta)."
+"Si se selecciona, las opciones de cuotas se mostrarán en la pantalla de pago "
+"(Solo en pago con tarjeta)."
 
-#: includes/admin/gp-woocommerce-settings.php:68
+#: includes/admin/gp-woocommerce-settings.php:75
 msgid "App Code Client"
 msgstr "App Code Client"
 
-#: includes/admin/gp-woocommerce-settings.php:70
+#: includes/admin/gp-woocommerce-settings.php:77
 msgid "Unique commerce identifier in "
 msgstr "Identificador único de comercio en "
 
-#: includes/admin/gp-woocommerce-settings.php:73
+#: includes/admin/gp-woocommerce-settings.php:80
 msgid "App Key Client"
 msgstr "App Key Client"
 
-#: includes/admin/gp-woocommerce-settings.php:75
+#: includes/admin/gp-woocommerce-settings.php:82
 msgid "Key used to encrypt communication with "
 msgstr "Clave utilizada para cifrar la comunicación con "
 
-#: includes/admin/gp-woocommerce-settings.php:78
+#: includes/admin/gp-woocommerce-settings.php:85
 msgid "App Code Server"
 msgstr "App Code Server"
 
-#: includes/admin/gp-woocommerce-settings.php:80
+#: includes/admin/gp-woocommerce-settings.php:87
 msgid "Unique commerce identifier to perform admin actions on "
 msgstr ""
 "Identificador de comercio único para realizar acciones administrativas en "
 
-#: includes/admin/gp-woocommerce-settings.php:83
+#: includes/admin/gp-woocommerce-settings.php:90
 msgid "App Key Server"
 msgstr "App Key Server"
 
-#: includes/admin/gp-woocommerce-settings.php:85
+#: includes/admin/gp-woocommerce-settings.php:92
 msgid "Key used to encrypt admin communication with "
 msgstr "Clave utilizada para cifrar la comunicación del administrador con "
 
-#: includes/gp-woocommerce-helper.php:177
+#: includes/gp-woocommerce-helper.php:178
 msgid "An error occurred generating the payment link, gateway response"
 msgstr ""
 "Se ha producido un error al generar el vínculo de pago, respuesta de la "
 "pasarela"
 
-#: includes/gp-woocommerce-helper.php:237
+#: includes/gp-woocommerce-helper.php:238
 msgid "Installments Type"
 msgstr "Tipo de Cuotas/Diferidos"
 
-#: includes/gp-woocommerce-helper.php:238
+#: includes/gp-woocommerce-helper.php:239
 msgid "Without Installments"
 msgstr "Sin cuotas"
 
